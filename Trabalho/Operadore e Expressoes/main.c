@@ -42,9 +42,10 @@ int main() {
     printf("O %d < %d isso é: %s\n", y, z, menor ? "Verdadeiro" : "Falso" );
     printf("\n");
 
-    bool num = x >= 0 && x % 2 == 0; // Calculo para ver se o número é positivo e par
+    bool num = x >= 0 && y % 2 == 0; // Calculo para ver se o número é positivo e par
 
-    printf("%d %s\n",x ,num ? "O número é Positivo e Par" : "Esse número não é positivo ou não é par");
+    printf("%s\n", num ? "Parabéns o 1° número passou no critério de ser positivo, e o 2° número passou no critério de ser par" : " "); 
+    //Pega o valor de verdadeiro e falso e exibe como uma mensagem
 
     return 0;
 }
