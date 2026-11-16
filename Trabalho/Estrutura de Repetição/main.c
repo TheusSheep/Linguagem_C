@@ -21,11 +21,11 @@ int main() {
         scanf("%d", &resp);
         printf("\n");
 
-        switch (resp)
+        switch (resp) //Para Selecionar uma das opções
         {
-        case 1:
-            ++cont;
-            while (resp == 1)
+        case 1: //Vai executar o código para somar os números
+            ++cont; //Adiciona mais 1 na várial para o resultado parar de ser 0
+            while (resp == 1) // Vai continuar repitindo enquanto for verdadeiro
             {
                 printf("Digite um %d° para soma: ", cont);
                 scanf("%d", &num);
@@ -38,35 +38,38 @@ int main() {
                 printf("Digite uma Opção: ");
                 scanf("%d", &resp);
                 printf("\n");
-            }
+            } //Esse códifo faz o número de soma ter o num somado ao valor que soma já tem armazenado tendo novo valor
             break;
 
         case 2:
-            if (cont != 0)
+            if (cont != 0) //Serve para caso cont já tenha sido utilizado no case 1
             {
                 --cont;
             }
-            printf("A quantidade de números digitados foram %d\n", cont);
-            printf("O resultado da sua soma é %d\n", soma);
+            printf("A quantidade de números digitados foram %d\n", cont); //Mostra a quantidade de números que foram digitados
+            printf("O resultado da sua soma é %d\n", soma);//Mostra o resultado total da soma
             printf("\n");
             break;
 
         case 3:
+            //Só serve para resetar os valores de números digitados e números somados
             soma = 0;
             cont = 0;
             break;
 
         case 0:
+            //Para fechar o programa
             printf("Programa será Fechado");
             break;
 
         default:
+            //A mensagem de erro que aparece e continua o loop
             printf("Número invalido foi digitado\n");
             printf("\n");
             break; 
          }
 
-    } while (resp != 0);
+    } while (resp != 0);//Sempre vai manter o loop mesmo digitando um número que não exite nas opções
 
     return 0;
 }
